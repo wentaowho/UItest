@@ -9,8 +9,10 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
+            "requireExactSource": false,
             "program": "F:/godotC#/Godot_v4.2.1-stable_mono_win64/Godot_v4.2.1-stable_mono_win64.exe",
             "args": [
+                "--fexec-charset=uff8",
                 "--path",
                 "${workspaceRoot}",
                 "${command:godot.csharp.getLaunchScene}"
@@ -27,6 +29,7 @@
             "program": "F:/godotC#/Godot_v4.2.1-stable_mono_win64/Godot_v4.2.1-stable_mono_win64.exe",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
+            "requireExactSource": false,
             "stopAtEntry": false,
             "args": [
                 "--path",

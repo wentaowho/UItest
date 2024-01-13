@@ -6,7 +6,7 @@ public partial class Sprite2D : Godot.Sprite2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		GD.Print("尚珊珊");
+		GD.Print("中文");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
