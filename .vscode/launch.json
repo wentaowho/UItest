@@ -5,19 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "1111111Launch (Select Scene)",
-            "type": "godot-mono",
-            "request": "launch",
-            "mode": "executable",
-            "preLaunchTask": "build",
-            "executable": "F:/godotC#/Godot_v4.2.1-stable_mono_win64/Godot_v4.2.1-stable_mono_win64.exe",
-            "executableArguments": [
-                "--path",
-                "workspaceRoot",
-                "SelectLaunchScene"
-            ]
-        },
-        {
             "name": "Launch (Select Scene)",
             "type": "coreclr",
             "request": "launch",
