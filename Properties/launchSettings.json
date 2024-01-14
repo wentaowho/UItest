@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "U Itest": {
+      "commandName": "Project",
+      "commandLineArgs": "F:\\godotC#\\Godot_v4.2.1-stable_mono_win64\\Godot_v4.2.1-stable_mono_win64.exe",
+      "nativeDebugging": true
+    },
+    "配置文件 1": {
+      "commandName": "Executable",
+      "executablePath": "F:\\godotC#\\Godot_v4.2.1-stable_mono_win64\\Godot_v4.2.1-stable_mono_win64.exe",
+      "commandLineArgs": "--path . --verbos",
+      "workingDirectory": ".",
+      "nativeDebugging": true
+    }
+  }
+}
