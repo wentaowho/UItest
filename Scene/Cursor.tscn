@@ -1,0 +1,151 @@
+[gd_scene load_steps=13 format=3 uid="uid://dnmbo7f7q8246"]
+
+[ext_resource type="Script" path="res://Script/Singleton/Cursor.cs" id="1_mr7xs"]
+[ext_resource type="Texture2D" uid="uid://c5fww0fh25381" path="res://assets/UI/Basic/Cursor/0.0.png" id="2_nyy8l"]
+[ext_resource type="Texture2D" uid="uid://crtg4bxu1h75t" path="res://assets/UI/Basic/Cursor/12.0.png" id="3_iuyta"]
+[ext_resource type="Texture2D" uid="uid://dj0bcjp4vql4g" path="res://assets/UI/Basic/Cursor/1.0.png" id="4_u6jl8"]
+[ext_resource type="Texture2D" uid="uid://jdqavjhk8h7m" path="res://assets/UI/Basic/Cursor/1.1.png" id="5_ai16t"]
+
+[sub_resource type="GDScript" id="GDScript_nc13j"]
+script/source = "
+extends Resource
+
+func loadRes(p_user:Node2D)->void:
+	printerr(\"error\")
+
+"
+
+[sub_resource type="Resource" id="Resource_jl52y"]
+script = SubResource("GDScript_nc13j")
+
+[sub_resource type="Animation" id="Animation_v1rc7"]
+resource_name = "Click"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_iuyta")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3, 3)]
+}
+
+[sub_resource type="Animation" id="Animation_hsry6"]
+resource_name = "ClickAble"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4_u6jl8"), ExtResource("5_ai16t")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(-2, -2), Vector2(-3, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j5cgc"]
+resource_name = "Normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_nyy8l")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2, -2)]
+}
+
+[sub_resource type="Animation" id="Animation_m1lvv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_nyy8l")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_djl7v"]
+_data = {
+"Click": SubResource("Animation_v1rc7"),
+"ClickAble": SubResource("Animation_hsry6"),
+"Normal": SubResource("Animation_j5cgc"),
+"RESET": SubResource("Animation_m1lvv")
+}
+
+[node name="Cursor" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_mr7xs")
+ClickableAnimation = SubResource("Resource_jl52y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_nyy8l")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_djl7v")
+}

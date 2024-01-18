@@ -11,10 +11,19 @@ config_version=5
 [application]
 
 config/name="U Itest"
-run/main_scene="res://control.tscn"
+run/main_scene="res://Scene/Cursor.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+
+[display]
+
+window/size/always_on_top=true
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 
 project/assembly_name="U Itest"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/com.timothyqiu.animation-resetter/plugin.cfg")
