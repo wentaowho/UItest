@@ -17,8 +17,9 @@ config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 [display]
 
 window/size/always_on_top=true
+window/size/window_width_override=1152
+window/size/window_height_override=648
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [dotnet]
 
@@ -27,3 +28,7 @@ project/assembly_name="U Itest"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/com.timothyqiu.animation-resetter/plugin.cfg")
+
+[gui]
+
+theme/custom="res://Theme/mainTheme.tres"
