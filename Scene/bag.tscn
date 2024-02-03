@@ -1,0 +1,233 @@
+[gd_scene load_steps=6 format=3 uid="uid://h4e6cbpaf2l7"]
+
+[ext_resource type="Script" path="res://Script/Inventory/Bag.gd" id="1_ym4ox"]
+[ext_resource type="ButtonGroup" uid="uid://bctrcb15ecpuw" path="res://Script/Inventory/按钮组.tres" id="2_hmd58"]
+[ext_resource type="Theme" uid="uid://clwxb2lrgr8qs" path="res://Theme/mainTheme.tres" id="3_wcnut"]
+[ext_resource type="PackedScene" uid="uid://b4tldil0rt1jt" path="res://Scene/UI_物品详细信息.tscn" id="4_ilruv"]
+[ext_resource type="Resource" uid="uid://dkwuoo6dxu3j0" path="res://Item/1001.tres" id="5_cut3m"]
+
+[node name="Bag" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1099.0
+offset_bottom = -393.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ym4ox")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 80.0
+offset_top = -9.0
+offset_right = 280.0
+offset_bottom = 31.0
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -1.0
+offset_right = 272.0
+offset_bottom = 382.0
+mouse_filter = 2
+theme_type_variation = &"PanelContainer_Inventory"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_type_variation = &"TabButton"
+toggle_mode = true
+button_group = ExtResource("2_hmd58")
+text = "装备"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_right = 3
+
+[node name="Button2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_type_variation = &"TabButton"
+toggle_mode = true
+button_group = ExtResource("2_hmd58")
+text = "消耗"
+
+[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_right = 3
+
+[node name="Button3" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_type_variation = &"TabButton"
+toggle_mode = true
+button_group = ExtResource("2_hmd58")
+text = "设置"
+
+[node name="MarginContainer4" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_right = 3
+
+[node name="Button4" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer4"]
+layout_mode = 2
+theme_type_variation = &"TabButton"
+toggle_mode = true
+button_group = ExtResource("2_hmd58")
+text = "特殊"
+
+[node name="MarginContainer5" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_right = 3
+
+[node name="Button5" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer5"]
+layout_mode = 2
+theme_type_variation = &"TabButton"
+toggle_mode = true
+button_group = ExtResource("2_hmd58")
+text = "装扮"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 6
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 260)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("3_wcnut")
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_right = 5
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+columns = 4
+
+[node name="InventorySlot" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="Item" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer/InventorySlot2" index="0"]
+item = ExtResource("5_cut3m")
+
+[node name="InventorySlot3" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot21" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot22" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot23" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot24" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot25" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot26" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot27" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot28" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot29" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot30" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot31" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot32" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[editable path="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer/InventorySlot2"]

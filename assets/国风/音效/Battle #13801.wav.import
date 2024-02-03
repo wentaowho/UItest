@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6kxhf0hteeof"
+path="res://.godot/imported/Battle #13801.wav-e2ae32b5a0c1ce33f56884179d9358fb.sample"
+
+[deps]
+
+source_file="res://assets/国风/音效/Battle #13801.wav"
+dest_files=["res://.godot/imported/Battle #13801.wav-e2ae32b5a0c1ce33f56884179d9358fb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

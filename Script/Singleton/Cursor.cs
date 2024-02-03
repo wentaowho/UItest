@@ -23,6 +23,7 @@ public partial class Cursor : Node2D
     {
         // 注册单例
         Singleton = this;
+        TopLevel = true;
         // 初始化 on-ready 变量
         _animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
         _animationPlayer.Play(_status.ToString());

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dkwuoo6dxu3j0"]
+
+[ext_resource type="Texture2D" uid="uid://thkooofk3luu" path="res://assets/UI/Item/02000003.info.icon.png" id="1_svvdh"]
+[ext_resource type="Texture2D" uid="uid://5hwgu2gs8f5q" path="res://assets/UI/Item/02000003.info.iconRaw.png" id="2_ya1we"]
+[ext_resource type="Script" path="res://Script/Item/Item.gd" id="3_4aq70"]
+
+[resource]
+script = ExtResource("3_4aq70")
+hp = 0
+atk = 100
+def = 0
+speed = 0
+descr = ""
+ICON = ExtResource("1_svvdh")
+ICON_RAW = ExtResource("2_ya1we")
+itemName = "蓝药水"
+itemDescr = "哦，蓝药水"

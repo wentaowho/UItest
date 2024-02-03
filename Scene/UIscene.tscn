@@ -1,0 +1,130 @@
+[gd_scene load_steps=11 format=3 uid="uid://epvtq2tbpyow"]
+
+[ext_resource type="Texture2D" uid="uid://dvfxj072yte43" path="res://assets/2D横板平台游戏/场景建筑/村长家.png" id="1_b7fkn"]
+[ext_resource type="Texture2D" uid="uid://cjieccucgbow7" path="res://assets/UIbase/图示/WorldSelect.default.0.0.png" id="2_lwtbo"]
+[ext_resource type="Texture2D" uid="uid://ccm6lby5vbani" path="res://assets/2D横板平台游戏/场景建筑/Tree_02.png" id="3_g7fhp"]
+[ext_resource type="Texture2D" uid="uid://cx7dhpqop2ma2" path="res://assets/2D横板平台游戏/场景建筑/sigs.png" id="4_vk2o7"]
+[ext_resource type="Texture2D" uid="uid://b8fiay4amsf1e" path="res://assets/2D横板平台游戏/场景建筑/Tree_03.png" id="5_6yusq"]
+[ext_resource type="Texture2D" uid="uid://crai5clhmbkhf" path="res://assets/2D横板平台游戏/场景建筑/Grass_02.png" id="6_u3fa3"]
+[ext_resource type="Texture2D" uid="uid://xy3n6ka44hod" path="res://assets/2D横板平台游戏/场景建筑/Grass_01.png" id="7_6bh73"]
+[ext_resource type="Texture2D" uid="uid://c5kkqijhdwgmi" path="res://assets/2D横板平台游戏/场景建筑/Grassland_02.png" id="8_qnlk4"]
+[ext_resource type="Texture2D" uid="uid://qn3yv0elaqna" path="res://assets/2D横板平台游戏/场景建筑/Grassland_01.png" id="9_40ng8"]
+
+[sub_resource type="TileSet" id="TileSet_ar521"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="村长家" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(322, -88)
+scale = Vector2(3, 3)
+texture = ExtResource("1_b7fkn")
+
+[node name="WorldSelect_default_0_0" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(746, -38)
+scale = Vector2(3, 3)
+texture = ExtResource("2_lwtbo")
+
+[node name="TileMap" type="TileMap" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(10, -14)
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_ar521")
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 196608, 23, 65537, 262144, 23, 65538, 327680, 23, 65539, 393216, 23, 65540, 196608, 23, 65541, 262144, 23, 65542, 327680, 23, 65543, 393216, 23, 65544, 196608, 23, 65545, 262144, 23, 65546, 327680, 23, 65547, 393216, 23, 65548, 393216, 23)
+
+[node name="Tree02" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(394, -88)
+scale = Vector2(3, 3)
+texture = ExtResource("3_g7fhp")
+
+[node name="Sigs" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(499, -45)
+scale = Vector2(3, 3)
+texture = ExtResource("4_vk2o7")
+
+[node name="Tree03" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(241, -88)
+scale = Vector2(3, 3)
+texture = ExtResource("5_6yusq")
+
+[node name="Grass02" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(424, -46)
+scale = Vector2(3, 3)
+texture = ExtResource("6_u3fa3")
+centered = false
+
+[node name="Grass01" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(194, -56)
+scale = Vector2(3, 3)
+texture = ExtResource("7_6bh73")
+centered = false
+
+[node name="Grassland02" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(291, -39)
+scale = Vector2(3, 3)
+texture = ExtResource("8_qnlk4")
+centered = false
+
+[node name="Grassland01" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(194, -40)
+rotation = -0.000344823
+scale = Vector2(3, 3)
+texture = ExtResource("9_40ng8")
+centered = false
+
+[node name="Grassland03" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(485, -39)
+scale = Vector2(3, 3)
+texture = ExtResource("8_qnlk4")
+centered = false
+
+[node name="Grassland04" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(388, -40)
+scale = Vector2(3, 3)
+texture = ExtResource("9_40ng8")
+centered = false
+
+[node name="Grassland05" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(679, -39.1672)
+rotation = -0.000344823
+scale = Vector2(3, 3)
+texture = ExtResource("8_qnlk4")
+centered = false
+
+[node name="Grassland06" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(582, -40.1338)
+rotation = -0.000344823
+scale = Vector2(3, 3)
+texture = ExtResource("9_40ng8")
+centered = false
+
+[node name="Grassland07" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(97.0003, -39)
+rotation = -0.000344823
+scale = Vector2(3, 3)
+texture = ExtResource("8_qnlk4")
+centered = false
+
+[node name="Grassland08" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -39.9666)
+rotation = -0.000344823
+scale = Vector2(3, 3)
+texture = ExtResource("9_40ng8")
+centered = false

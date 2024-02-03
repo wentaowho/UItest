@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsrsgrh4xfmyn"]
+
+[ext_resource type="PackedScene" uid="uid://h4e6cbpaf2l7" path="res://Scene/bag.tscn" id="1_6xf6w"]
+
+[node name="Control2" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1370.0
+offset_bottom = 773.0
+
+[node name="Bag" parent="." instance=ExtResource("1_6xf6w")]
+layout_mode = 1

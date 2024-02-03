@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://db31ax0s00d47"]
+
+[ext_resource type="PackedScene" uid="uid://du6yls8bofo67" path="res://Scene/UI.tscn" id="1_i2pq0"]
+[ext_resource type="PackedScene" uid="uid://ba7cg1vgxou33" path="res://Scene/UI_0.tscn" id="5_2ghi8"]
+[ext_resource type="Script" path="res://Scene/Back.gd" id="8_233bo"]
+[ext_resource type="Texture2D" uid="uid://b35eu8kofn1jj" path="res://assets/天空/云端.png" id="9_p42sw"]
+[ext_resource type="AudioStream" uid="uid://ctvpbjv7xths2" path="res://assets/Sound/BgmUI/Title.mp3" id="11_dpsxt"]
+
+[node name="Scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Login" type="SubViewportContainer" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+metadata/_edit_group_ = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Login"]
+
+[node name="Back" type="ParallaxLayer" parent="Login/ParallaxBackground"]
+texture_filter = 2
+position = Vector2(-13, 237)
+motion_mirroring = Vector2(1280, 720)
+script = ExtResource("8_233bo")
+
+[node name="云端2" type="Sprite2D" parent="Login/ParallaxBackground/Back"]
+position = Vector2(134, 145)
+texture = ExtResource("9_p42sw")
+
+[node name="云端" type="Sprite2D" parent="Login/ParallaxBackground/Back"]
+position = Vector2(1414, 145)
+texture = ExtResource("9_p42sw")
+
+[node name="SubViewport" type="SubViewport" parent="Login"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(455, 256)
+render_target_update_mode = 4
+
+[node name="Ui" parent="Login/SubViewport" instance=ExtResource("1_i2pq0")]
+texture_filter = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Login"]
+scale = Vector2(0.333333, 0.333333)
+stream = ExtResource("11_dpsxt")
+autoplay = true
+
+[node name="UI" parent="." instance=ExtResource("5_2ghi8")]

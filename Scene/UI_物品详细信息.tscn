@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4tldil0rt1jt"]
+
+[ext_resource type="Texture2D" uid="uid://2gvk7q4q5xn0" path="res://assets/UIbase/槽位/Slot_00.png" id="1_lu05l"]
+[ext_resource type="Script" path="res://Script/Inventory/InventorySlot.gd" id="2_cjxth"]
+[ext_resource type="Resource" uid="uid://c0knrc3f4e3ld" path="res://Item/1000.tres" id="3_xmi8k"]
+[ext_resource type="Script" path="res://Script/Inventory/InventoryItem.gd" id="4_ey7dh"]
+
+[node name="InventorySlot" type="TextureRect"]
+offset_right = 48.0
+offset_bottom = 48.0
+mouse_filter = 0
+texture = ExtResource("1_lu05l")
+script = ExtResource("2_cjxth")
+
+[node name="Item" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -15.0
+offset_right = 13.5
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("4_ey7dh")
+item = ExtResource("3_xmi8k")

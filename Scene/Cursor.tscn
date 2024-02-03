@@ -136,6 +136,7 @@ _data = {
 }
 
 [node name="Cursor" type="Node2D"]
+z_index = 4096
 texture_filter = 1
 script = ExtResource("1_mr7xs")
 ClickableAnimation = SubResource("Resource_jl52y")

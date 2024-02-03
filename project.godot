@@ -11,14 +11,21 @@ config_version=5
 [application]
 
 config/name="U Itest"
-run/main_scene="res://Scene/Cursor.tscn"
+config/tags=PackedStringArray("ui")
+run/main_scene="res://Scene/UI_武侠.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
+
+[autoload]
+
+DargManager="*res://Script/Singleton/DargManager.gd"
+ItemInfo="*res://Scene/ItemInfo.tscn"
+Cursor="*res://Scene/Cursor.tscn"
 
 [display]
 
+window/size/viewport_width=1366
+window/size/viewport_height=768
 window/size/always_on_top=true
-window/size/window_width_override=1152
-window/size/window_height_override=648
 window/stretch/mode="canvas_items"
 
 [dotnet]
@@ -32,3 +39,4 @@ enabled=PackedStringArray("res://addons/com.timothyqiu.animation-resetter/plugin
 [gui]
 
 theme/custom="res://Theme/mainTheme.tres"
+theme/custom_font="res://Theme/AlibabaPuHuiTi-3-75-SemiBold.ttf"

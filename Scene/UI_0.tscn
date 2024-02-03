@@ -1,0 +1,189 @@
+[gd_scene load_steps=8 format=3 uid="uid://ba7cg1vgxou33"]
+
+[ext_resource type="Texture2D" uid="uid://rkrsa51rpwuf" path="res://assets/UI/Login/Common/frame.png" id="1_3goxw"]
+[ext_resource type="Theme" uid="uid://clwxb2lrgr8qs" path="res://Theme/mainTheme.tres" id="2_dpxkp"]
+[ext_resource type="Texture2D" uid="uid://brmlsapel4ub8" path="res://assets/UIbase/按钮/回到标题.png" id="3_e1atv"]
+[ext_resource type="Texture2D" uid="uid://bfy037pla3qgx" path="res://assets/UIbase/按钮/PE菜单按钮大.png" id="4_l2il3"]
+[ext_resource type="Texture2D" uid="uid://dx63lvt8l4u1x" path="res://assets/UIbase/按钮/重置关卡.png" id="5_gsqsi"]
+[ext_resource type="Script" path="res://Scene/Button.gd" id="6_iqfg5"]
+[ext_resource type="PackedScene" uid="uid://dnmbo7f7q8246" path="res://Scene/Cursor.tscn" id="7_05f1v"]
+
+[node name="UI" type="CanvasLayer"]
+layer = 0
+
+[node name="Frame" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_3goxw")
+metadata/_edit_lock_ = true
+
+[node name="TabContainer" type="TabContainer" parent="."]
+offset_left = 1037.0
+offset_top = 15.0
+offset_right = 1190.0
+offset_bottom = 55.0
+tooltip_text = "vvvv"
+theme = ExtResource("2_dpxkp")
+clip_tabs = false
+
+[node name="VScrollBar" type="VScrollBar" parent="TabContainer"]
+layout_mode = 2
+theme = ExtResource("2_dpxkp")
+
+[node name="PanelContainer" type="PanelContainer" parent="TabContainer/VScrollBar"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 400.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/VScrollBar/PanelContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/VScrollBar/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_dpxkp")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+bbcode_enabled = true
+text = "[b]bold[i]bold italic[/i][/b][i]italic[/i]ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+
+[node name="Menu" type="PanelContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+theme_type_variation = &"MenuPanelContainer"
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Menu"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Menu/MarginContainer"]
+layout_mode = 2
+columns = 6
+
+[node name="Set" type="TextureRect" parent="TabContainer/Menu/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+tooltip_text = "vsdvv"
+texture = ExtResource("3_e1atv")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Set_Label" type="Label" parent="TabContainer/Menu/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_type_variation = &"Label_text"
+text = "设置
+"
+
+[node name="Meau" type="TextureRect" parent="TabContainer/Menu/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("4_l2il3")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Meau_Label" type="Label" parent="TabContainer/Menu/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_type_variation = &"Label_text"
+text = "菜单
+"
+
+[node name="Achievement" type="TextureRect" parent="TabContainer/Menu/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+tooltip_text = "1000000
+"
+texture = ExtResource("5_gsqsi")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Achievement_Label" type="Label" parent="TabContainer/Menu/MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_type_variation = &"Label_text"
+text = "成就"
+
+[node name="TTT" type="PanelContainer" parent="."]
+texture_filter = 1
+offset_left = 21.0
+offset_top = 20.0
+offset_right = 537.0
+offset_bottom = 556.0
+tooltip_text = "1111111111111111111111111111111111111111111111111111111111111"
+theme = ExtResource("2_dpxkp")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TTT"]
+layout_direction = 1
+layout_mode = 2
+tooltip_text = "vsd"
+
+[node name="Label" type="Label" parent="TTT/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"Label_title"
+text = "更新日志:v.202410190001"
+
+[node name="Text" type="Label" parent="TTT/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(500, 400)
+layout_mode = 2
+theme_type_variation = &"Label_text"
+text = "1.英雄： 
+v1：斗气死亡断层，
+v2：斗气死亡断层给予葵花；
+v3：（装备特效，将轻舞飞扬换成终极打击）
+2.龙骑：龙之献祭改成类似速射的技能，龙之魂改成爆发buff增加伤害。
+v2巨龙给予龙之魂
+v3（装备特效，巨龙给予变身）
+3.骑士：不改，算了
+3.刀飞：旋风cd，业火（cd），暗杀(暗影双刀)，双刀风暴，黑暗杂耍，落叶斩
+自动回蓝，落叶斩耗蓝，业火之后进入强化隐身状态，
+4.标飞：三飞，多重飞镖，速射，蝙蝠，暴雨梨花镖，多重投掷
+5.弩手：穿透箭，一击必杀，稳固射击，完成度很高需要修改文件
+6.弓手：v1骤雨，v2变身，v3远程箭袋，变身需要重新设计，主要是变身模型
+7.船长：金属风暴，海鸥，双管猎枪，上船，变身可以投弹，文件需要修改
+8.拳手：能量期间打爆发，部分技能获得额外能量，爆发技能回蓝，蓝耗技能大爆发
+9.牧师：双姿态，先不改
+10.火毒：毒死怪上线，特效简单修改，陨石术看情况
+11.冰雷：不改
+"
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TTT/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Button" type="Button" parent="TTT/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_dpxkp")
+action_mode = 0
+keep_pressed_outside = true
+text = "确认"
+script = ExtResource("6_iqfg5")
+
+[node name="Control" type="Control" parent="TTT/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="TTT/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+action_mode = 0
+text = "取消"
+
+[node name="Control2" type="Control" parent="TTT/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Cursor" parent="." instance=ExtResource("7_05f1v")]
+z_index = 4096
+texture_filter = 2
+position = Vector2(750, 112)
+
+[connection signal="button_up" from="TTT/VBoxContainer/HBoxContainer/Button" to="TTT/VBoxContainer/HBoxContainer/Button" method="_on_button_up"]
+[connection signal="mouse_exited" from="TTT/VBoxContainer/HBoxContainer/Button" to="TTT/VBoxContainer/HBoxContainer/Button" method="_on_mouse_exited"]
