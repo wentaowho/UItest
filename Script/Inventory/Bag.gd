@@ -8,4 +8,4 @@ func _ready() -> void:
 func _on_gui_input(event:InputEvent):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
-			DargManager.startPick(self,DargManager.dragType.p_Control)
+			DragManager.startPickControl(self)

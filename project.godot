@@ -17,9 +17,9 @@ config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 
 [autoload]
 
-DargManager="*res://Script/Singleton/DargManager.gd"
 ItemInfo="*res://Scene/ItemInfo.tscn"
 Cursor="*res://Scene/Cursor.tscn"
+DragManager="*res://Script/Singleton/DragManager.gd"
 
 [display]
 

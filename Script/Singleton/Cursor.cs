@@ -10,6 +10,8 @@ public partial class Cursor : Node2D
         Normal,
         Click,
         Clickable,
+        Catched,
+        Catchable
     }
 
     public static Cursor Singleton { get; private set; }
@@ -35,7 +37,7 @@ public partial class Cursor : Node2D
         AddChild(_timer);
         _timer.Timeout += () => ChangeState(CursorStatus.Normal);
         // 隐藏鼠标，这样才能使用我们自定义的带动画的鼠标图案
-        Input.MouseMode = Input.MouseModeEnum.Hidden;
+        // Input.MouseMode = Input.MouseModeEnum.Hidden;
     }
 
     public override void _Input(InputEvent @event)
@@ -54,6 +56,7 @@ public partial class Cursor : Node2D
     public override void _Process(double delta)
     {
         GlobalPosition = GetGlobalMousePosition();
+        GD.Print(GetGodotPropertyDefaultValues());
     }
 
     private void ChangeState(CursorStatus status)

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Consume" load_steps=2 format=3 uid="uid://bb8wr6r0twe0d"]
+
+[ext_resource type="Script" path="res://Script/Item/Consume.gd" id="1_ivq6f"]
+
+[resource]
+script = ExtResource("1_ivq6f")
+hp = 0
+mp = 0
+stackMaxNumber = 99
+itemName = ""
+itemDescr = ""
+type = 0

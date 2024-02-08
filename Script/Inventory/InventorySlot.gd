@@ -1,32 +1,61 @@
+class_name InventorySlot
 extends TextureRect
-@onready var items: TextureRect = $Item
+@onready var slot: TextureRect = $Item
 
-var offset=Vector2(24,24)
+var offset = Vector2(24, 24)
 var info
-var isDrag:bool
+var isDrag: bool
 
 func _ready() -> void:
-	mouse_entered.connect(p)
-	mouse_exited.connect(e)
 	gui_input.connect(_on_gui_input)
-	set_process(false)
+	mouse_entered.connect(_on_mouse_entered)
+	mouse_exited.connect(_on_mouse_exited)
 
+func _on_mouse_entered() -> void:
+	DragManager.currentSlot=self
+	if slot.item!=null:
+		showItemInfo(slot.item)
 
-func p()->void:
-	ItemInfo.item=items.item
-	ItemInfo.visible=true
-	ItemInfo.global_position=offset+global_position
-	set_process(true)
+func _on_mouse_exited() -> void:
+	DragManager.currentSlot=null
+	ItemInfo.visible = false
+	ItemInfo.item = null
 
-
-func e()->void:
-	ItemInfo.visible=false
-	ItemInfo.item=null
-	set_process(false)
-
-func _on_gui_input(event:InputEvent):
+func _on_gui_input(event: InputEvent):
 	if event is InputEventMouseButton:
+		#DragManager._input(event)
 		if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
-			#todo 物品和界面分开
-			DargManager.startPick(self.get_node("Item").duplicate(),DargManager.dragType.p_Item)
+			
+			#交换物体
+			if DragManager.pickUpType==DragManager.dragType.p_ReplaceItem:
+				DragManager.pickUpType=DragManager.dragType.none
+			#拾取物体
+			elif DragManager.pickUpType==DragManager.dragType.none and slot.item!=null:
+				#print("拾取物体")
+				get_node("Item").counter.visible=false
+				var pickData: InventoryItem = get_node("Item").duplicate()
+				pickData.isDrag = true;
+				#print(pickData.count)
+				print(pickData.isDrag)
+				#pickData.count.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT
+				var data: Dictionary = {
+					"InventoryItem": pickData,
+					"InventorySlot": self,
+				}
+				get_node("Item").texture = null
+				DragManager.startPickItem(data)
+		elif event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed():
+			#交换物体
+			if DragManager.pickUpType==DragManager.dragType.p_ReplaceItem:
+				DragManager.pickUpType=DragManager.dragType.none
 
+func setItem(item:Item):
+	get_node("Item").set("item",item)
+
+func getItem()->Item:
+	return get_node("Item").item
+
+func showItemInfo(item:Item):
+	ItemInfo.item = item
+	ItemInfo.visible = true
+	ItemInfo.global_position = offset + global_position
