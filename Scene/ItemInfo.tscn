@@ -5,7 +5,7 @@
 
 [node name="Info" type="PanelContainer"]
 self_modulate = Color(1, 1, 1, 0.490196)
-z_index = 100
+z_index = 1
 offset_left = 13.0
 offset_top = 15.0
 offset_right = 252.0

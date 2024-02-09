@@ -13,6 +13,7 @@ extends PanelContainer
 			icon.set("texture",item.ICON)
 			itemName.text=item.itemName
 			itemDescr.text=item.itemDescr
+			
 		else:
 			icon.texture=null
 			itemName.text=""

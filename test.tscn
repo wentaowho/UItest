@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkjkbijp42yks"]
+[gd_scene load_steps=6 format=3 uid="uid://bkjkbijp42yks"]
 
+[ext_resource type="Script" path="res://bagtest.gd" id="1_ks6vt"]
 [ext_resource type="PackedScene" uid="uid://b4tldil0rt1jt" path="res://Scene/UI_物品详细信息.tscn" id="1_qwmvt"]
 [ext_resource type="Resource" uid="uid://c0knrc3f4e3ld" path="res://Item/1000.tres" id="2_doahw"]
 [ext_resource type="Script" path="res://Label.gd" id="3_rshe5"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ks6vt")
 
 [node name="InventorySlot" parent="." instance=ExtResource("1_qwmvt")]
 layout_mode = 0
@@ -19,7 +21,6 @@ offset_left = 200.0
 offset_top = 56.0
 offset_right = 248.0
 offset_bottom = 104.0
-mouse_default_cursor_shape = 6
 
 [node name="Item" parent="InventorySlot" index="0"]
 item = ExtResource("2_doahw")
@@ -40,5 +41,13 @@ offset_right = 128.0
 offset_bottom = 40.0
 script = ExtResource("3_rshe5")
 
+[node name="InventorySlot3" parent="." instance=ExtResource("1_qwmvt")]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 56.0
+offset_right = 200.0
+offset_bottom = 104.0
+
 [editable path="InventorySlot"]
 [editable path="InventorySlot2"]
+[editable path="InventorySlot3"]
