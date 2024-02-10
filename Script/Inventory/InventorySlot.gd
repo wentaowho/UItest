@@ -12,13 +12,14 @@ var isDrag: bool:
 		var i = get_node("Item")
 		if (v):
 			i.set("self_modulate", Color(1, 1, 1, 0.25))
+			mouse_default_cursor_shape = Control.CURSOR_ARROW
 			i.counter.visible = false
 		else:
 			i.set("self_modulate", Color(1, 1, 1, 1))
+			mouse_default_cursor_shape = Control.CURSOR_CROSS
 			i.counter.visible = i.counterVisible
 
 func _ready() -> void:
-	print(get_child(0))
 	gui_input.connect(_on_gui_input)
 	mouse_entered.connect(_on_mouse_entered)
 	mouse_exited.connect(_on_mouse_exited)
@@ -29,6 +30,7 @@ func _on_mouse_entered() -> void:
 	DragManager.set_process_input(false)
 	if slot.item != null:
 		showItemInfo(slot.item)
+	setCursorShape()
 
 func _on_mouse_exited() -> void:
 	DragManager.currentSlot = null
@@ -65,10 +67,14 @@ func _on_gui_input(event: InputEvent):
 
 func setItem(item: Item):
 	get_node("Item").set("item", item)
-	if (item != null):
+	setCursorShape()
+
+func setCursorShape():
+	if (getItem() != null && !isDrag):
 		mouse_default_cursor_shape = Control.CURSOR_CROSS
 	else:
 		mouse_default_cursor_shape = Control.CURSOR_ARROW
+
 
 func getItem() -> Item:
 	return get_node("Item").item

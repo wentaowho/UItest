@@ -53,7 +53,7 @@ public partial class Cursor : Node2D
     {
         switch (@event)
         {
-            //移动鼠标
+            //点击鼠标
             case InputEventMouseButton:
                 {
                     InputEventMouseButton mouseEvent = (InputEventMouseButton)@event;
@@ -61,13 +61,18 @@ public partial class Cursor : Node2D
                     {
                         case Input.CursorShape.Cross:
                             {
+                                if (mouseEvent.ButtonIndex == MouseButton.Left && (!mouseEvent.IsPressed() || mouseEvent.IsReleased()))
+                                {
+                                    ChangeState(CursorStatus.Catched);
+                                    return;
+                                }
                                 ChangeState(CursorStatus.Catchable);
                                 break;
                             }
                         case Input.CursorShape.Arrow:
                         default:
                             {
-                                if (mouseEvent.ButtonIndex != MouseButton.Left || !mouseEvent.IsPressed() || mouseEvent.IsReleased())
+                                if (mouseEvent.ButtonIndex == MouseButton.Left && (!mouseEvent.IsPressed() || mouseEvent.IsReleased()))
                                 {
                                     ChangeState(CursorStatus.Normal);
                                     return;
@@ -78,7 +83,7 @@ public partial class Cursor : Node2D
                     }
                     break;
                 }
-            //点击鼠标
+            //移动鼠标
             case InputEventMouseMotion:
                 {
                     InputEventMouseMotion mouseEvent = (InputEventMouseMotion)@event;
