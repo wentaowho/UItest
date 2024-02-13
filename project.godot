@@ -8,11 +8,21 @@
 
 config_version=5
 
+[addons]
+
+resources_spreadsheet_view/color_rows=true
+resources_spreadsheet_view/color_arrays=true
+resources_spreadsheet_view/array_min_width=128.0
+resources_spreadsheet_view/resource_preview_size=32.0
+resources_spreadsheet_view/clip_headers=false
+resources_spreadsheet_view/dupe_arrays=true
+resources_spreadsheet_view/context_menu_on_leftclick=false
+
 [application]
 
 config/name="U Itest"
 config/tags=PackedStringArray("ui")
-run/main_scene="res://Scene/UI_武侠.tscn"
+run/main_scene="res://test.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 
 [autoload]
@@ -20,6 +30,7 @@ config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 ItemInfo="*res://Scene/ItemInfo.tscn"
 Cursor="*res://Scene/Cursor.tscn"
 DragManager="*res://Script/Singleton/DragManager.gd"
+PackManager="*res://Script/Singleton/PackManager.gd"
 
 [display]
 
@@ -34,7 +45,7 @@ project/assembly_name="U Itest"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/com.timothyqiu.animation-resetter/plugin.cfg")
+enabled=PackedStringArray("res://addons/com.timothyqiu.animation-resetter/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
 
 [gui]
 

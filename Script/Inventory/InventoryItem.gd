@@ -20,7 +20,7 @@ var isDrag: bool = false
 		if !is_node_ready():
 			await ready
 		if v != null:
-			counter.visible = (v.type == Item.itemType.weapon)
+			counter.visible = (v.type != Item.itemType.weapon)
 			item = load(v.resource_path)
 			if isDrag:
 				texture = item.ICON_RAW

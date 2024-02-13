@@ -1,4 +1,5 @@
 extends Control
+class_name Bag
 var offset=Vector2(24,24)
 var info
 var isDrag:bool

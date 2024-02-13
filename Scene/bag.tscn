@@ -1,11 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://h4e6cbpaf2l7"]
+[gd_scene load_steps=8 format=3 uid="uid://h4e6cbpaf2l7"]
 
 [ext_resource type="Script" path="res://Script/Inventory/Bag.gd" id="1_ym4ox"]
 [ext_resource type="ButtonGroup" uid="uid://bctrcb15ecpuw" path="res://Script/Inventory/按钮组.tres" id="2_hmd58"]
 [ext_resource type="Theme" uid="uid://clwxb2lrgr8qs" path="res://Theme/mainTheme.tres" id="3_wcnut"]
 [ext_resource type="PackedScene" uid="uid://b4tldil0rt1jt" path="res://Scene/UI_物品详细信息.tscn" id="4_ilruv"]
-[ext_resource type="Resource" uid="uid://dkwuoo6dxu3j0" path="res://Item/1001.tres" id="5_cut3m"]
 [ext_resource type="Resource" uid="uid://c0knrc3f4e3ld" path="res://Item/1000.tres" id="5_pc8ug"]
+[ext_resource type="Script" path="res://Script/Item/Item.gd" id="6_gurc2"]
+
+[sub_resource type="Resource" id="Resource_j0cg6"]
+script = ExtResource("6_gurc2")
+itemName = ""
+itemDescr = ""
+type = 0
+num = 0
 
 [node name="Bag" type="Control"]
 layout_mode = 3
@@ -142,7 +149,7 @@ item = ExtResource("5_pc8ug")
 layout_mode = 2
 
 [node name="Item" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer/InventorySlot2" index="0"]
-item = ExtResource("5_cut3m")
+item = SubResource("Resource_j0cg6")
 
 [node name="InventorySlot3" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
 layout_mode = 2

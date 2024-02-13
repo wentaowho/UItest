@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cvwbqerphdoo0"
+
+[deps]
+
+files=["res://Item.resource.translation", "res://Item.hp.translation", "res://Item.mp.translation", "res://Item.stackMaxNumber.translation", "res://Item.ICON.translation", "res://Item.ICON.translation", "res://Item.itemName.translation", "res://Item.itemDescr.translation", "res://Item.type.translation", "res://Item.num.translation"]
+
+source_file="res://Item.csv"
+dest_files=["res://Item.resource.translation", "res://Item.hp.translation", "res://Item.mp.translation", "res://Item.stackMaxNumber.translation", "res://Item.ICON.translation", "res://Item.ICON.translation", "res://Item.itemName.translation", "res://Item.itemDescr.translation", "res://Item.type.translation", "res://Item.num.translation"]
+
+[params]
+
+compress=true
+delimiter=0

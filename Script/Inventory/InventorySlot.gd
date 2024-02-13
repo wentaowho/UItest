@@ -77,7 +77,10 @@ func setCursorShape():
 
 
 func getItem() -> Item:
-	return get_node("Item").item
+	if get_node("Item").item!=null:
+		return get_node("Item").item
+	else:
+		return null
 
 func showItemInfo(item: Item):
 	ItemInfo.item = item

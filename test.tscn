@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkjkbijp42yks"]
+[gd_scene load_steps=10 format=3 uid="uid://bkjkbijp42yks"]
 
 [ext_resource type="Script" path="res://bagtest.gd" id="1_ks6vt"]
 [ext_resource type="PackedScene" uid="uid://b4tldil0rt1jt" path="res://Scene/UI_物品详细信息.tscn" id="1_qwmvt"]
 [ext_resource type="Resource" uid="uid://c0knrc3f4e3ld" path="res://Item/1000.tres" id="2_doahw"]
 [ext_resource type="Script" path="res://Label.gd" id="3_rshe5"]
-[ext_resource type="Resource" uid="uid://dkwuoo6dxu3j0" path="res://Item/1001.tres" id="3_ycbib"]
+[ext_resource type="Script" path="res://Bag.gd" id="3_url0w"]
+[ext_resource type="Resource" uid="uid://3sfo8wd46faf" path="res://Item/1001.tres" id="3_ycbib"]
+[ext_resource type="Script" path="res://Script/Bag/save.gd" id="7_ly3xb"]
+[ext_resource type="Script" path="res://Script/Bag/load.gd" id="8_2ijbg"]
+[ext_resource type="Script" path="res://Script/Bag/clear.gd" id="9_6t0rm"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,39 +19,72 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ks6vt")
 
-[node name="InventorySlot" parent="." instance=ExtResource("1_qwmvt")]
-layout_mode = 0
-offset_left = 200.0
-offset_top = 56.0
-offset_right = 248.0
-offset_bottom = 104.0
-
-[node name="Item" parent="InventorySlot" index="0"]
-item = ExtResource("2_doahw")
-
-[node name="InventorySlot2" parent="." instance=ExtResource("1_qwmvt")]
-layout_mode = 0
-offset_left = 248.0
-offset_top = 56.0
-offset_right = 296.0
-offset_bottom = 104.0
-
-[node name="Item" parent="InventorySlot2" index="0"]
-item = ExtResource("3_ycbib")
-
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_right = 128.0
 offset_bottom = 40.0
 script = ExtResource("3_rshe5")
 
-[node name="InventorySlot3" parent="." instance=ExtResource("1_qwmvt")]
+[node name="Bag" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_url0w")
+
+[node name="InventorySlot" parent="Bag" instance=ExtResource("1_qwmvt")]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 56.0
+offset_right = 248.0
+offset_bottom = 104.0
+
+[node name="Item" parent="Bag/InventorySlot" index="0"]
+item = ExtResource("2_doahw")
+
+[node name="InventorySlot2" parent="Bag" instance=ExtResource("1_qwmvt")]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 56.0
+offset_right = 296.0
+offset_bottom = 104.0
+
+[node name="Item" parent="Bag/InventorySlot2" index="0"]
+item = ExtResource("3_ycbib")
+
+[node name="InventorySlot3" parent="Bag" instance=ExtResource("1_qwmvt")]
 layout_mode = 0
 offset_left = 152.0
 offset_top = 56.0
 offset_right = 200.0
 offset_bottom = 104.0
 
-[editable path="InventorySlot"]
-[editable path="InventorySlot2"]
-[editable path="InventorySlot3"]
+[node name="save" type="Button" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 152.0
+offset_right = 168.0
+offset_bottom = 175.0
+text = "save"
+script = ExtResource("7_ly3xb")
+
+[node name="load" type="Button" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 152.0
+offset_right = 272.0
+offset_bottom = 175.0
+text = "load"
+script = ExtResource("8_2ijbg")
+
+[node name="clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 152.0
+offset_right = 376.0
+offset_bottom = 175.0
+text = "clear"
+script = ExtResource("9_6t0rm")
+
+[editable path="Bag/InventorySlot"]
+[editable path="Bag/InventorySlot2"]
+[editable path="Bag/InventorySlot3"]

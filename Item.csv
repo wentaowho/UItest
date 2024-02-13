@@ -1,0 +1,5 @@
+resource_path,resource_name,hp,mp,stackMaxNumber,ICON,ICON_RAW,itemName,itemDescr,type,num
+1000,,50,0,99,res://assets/UI/Item/02000000.info.icon.png,res://assets/UI/Item/02000000.info.iconRaw.png,红药水,红色药草精炼而成的浓缩药水.恢复HP约150.,Consume,0
+1001,,0,50,99,res://assets/UI/Item/02000003.info.icon.png,res://assets/UI/Item/02000003.info.iconRaw.png,蓝药水,蓝色药水，使用后回复50MP,Consume,0
+cousumeDemo,,0,0,99,,,,,Consume,0
+item,,,,,,,,,,

@@ -13,5 +13,5 @@ ICON = ExtResource("1_fpo75")
 ICON_RAW = ExtResource("2_3mdii")
 itemName = "红药水"
 itemDescr = "红色药草精炼而成的浓缩药水.恢复HP约150."
-type = 1
+type = 0
 num = 0
