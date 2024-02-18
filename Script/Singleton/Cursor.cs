@@ -49,6 +49,7 @@ public partial class Cursor : Node2D
         Input.MouseMode = Input.MouseModeEnum.Hidden;
     }
 
+    // todo:鼠标设置写到gds里，看看objects的引用问题
     public override void _Input(InputEvent @event)
     {
         switch (@event)

@@ -5,6 +5,6 @@ var id:String
 @export var mp:int
 @export var stackMaxNumber:int=99
 
-func _init() -> void:
-	id=resource_path.get_basename()
-	print("resname=",self)
+#func _init() -> void:
+	#id=resource_path.get_basename()
+	#print("resname=",self)

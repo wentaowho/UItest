@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://bagtest.gd" id="1_ks6vt"]
 [ext_resource type="PackedScene" uid="uid://b4tldil0rt1jt" path="res://Scene/UI_物品详细信息.tscn" id="1_qwmvt"]
-[ext_resource type="Resource" uid="uid://c0knrc3f4e3ld" path="res://Item/1000.tres" id="2_doahw"]
+[ext_resource type="Resource" path="res://Item/consume/1000.tres" id="2_doahw"]
 [ext_resource type="Script" path="res://Label.gd" id="3_rshe5"]
 [ext_resource type="Script" path="res://Bag.gd" id="3_url0w"]
-[ext_resource type="Resource" uid="uid://3sfo8wd46faf" path="res://Item/1001.tres" id="3_ycbib"]
+[ext_resource type="Resource" path="res://Item/consume/1001.tres" id="3_ycbib"]
 [ext_resource type="Script" path="res://Script/Bag/save.gd" id="7_ly3xb"]
 [ext_resource type="Script" path="res://Script/Bag/load.gd" id="8_2ijbg"]
 [ext_resource type="Script" path="res://Script/Bag/clear.gd" id="9_6t0rm"]

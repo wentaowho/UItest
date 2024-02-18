@@ -1,6 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://dnmbo7f7q8246"]
+[gd_scene load_steps=16 format=3 uid="uid://dnmbo7f7q8246"]
 
-[ext_resource type="Script" path="res://Script/Singleton/Cursor.cs" id="1_mr7xs"]
+[ext_resource type="Script" path="res://Script/Singleton/CursorManager.gd" id="1_8jy2m"]
 [ext_resource type="Texture2D" uid="uid://c5fww0fh25381" path="res://assets/UI/Basic/Cursor/0.0.png" id="2_nyy8l"]
 [ext_resource type="Texture2D" uid="uid://crtg4bxu1h75t" path="res://assets/UI/Basic/Cursor/12.0.png" id="3_iuyta"]
 [ext_resource type="Texture2D" uid="uid://dj0bcjp4vql4g" path="res://assets/UI/Basic/Cursor/1.0.png" id="4_u6jl8"]
@@ -8,18 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dfmnilbatqs35" path="res://assets/UI/Basic/Cursor/Cursor.5.0.png" id="6_mp8ka"]
 [ext_resource type="Texture2D" uid="uid://18yb2oq1mp7d" path="res://assets/UI/Basic/Cursor/Cursor.5.1.png" id="7_w30iy"]
 [ext_resource type="Texture2D" uid="uid://bf2iocfu5rouw" path="res://assets/UI/Basic/Cursor/Cursor.5.2.png" id="8_de08x"]
-
-[sub_resource type="GDScript" id="GDScript_nc13j"]
-script/source = "
-extends Resource
-
-func loadRes(_p_user:Node2D)->void:
-	printerr(\"error\")
-
-"
-
-[sub_resource type="Resource" id="Resource_jl52y"]
-script = SubResource("GDScript_nc13j")
 
 [sub_resource type="Animation" id="Animation_vgbtm"]
 resource_name = "Catchable"
@@ -201,8 +189,7 @@ _data = {
 [node name="Cursor" type="Node2D"]
 z_index = 4096
 texture_filter = 1
-script = ExtResource("1_mr7xs")
-ClickableAnimation = SubResource("Resource_jl52y")
+script = ExtResource("1_8jy2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1000

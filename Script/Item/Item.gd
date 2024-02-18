@@ -20,9 +20,8 @@ enum itemType{
 @export var itemDescr:String
 @export var type:itemType
 @export var num:int
+
 #
 #func _() -> void:
 	#match type:
 		#itemType.co
-
-

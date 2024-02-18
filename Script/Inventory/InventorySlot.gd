@@ -50,6 +50,7 @@ func _on_gui_input(event: InputEvent):
 			elif DragManager.pickUpType == DragManager.dragType.none and slot.item != null:
 				#print("拾取物体")
 				#get_node("Item").counter.visible=false
+				
 				var pickData: InventoryItem = get_node("Item").duplicate()
 				pickData.isDrag = true;
 				ItemInfo.visible = false

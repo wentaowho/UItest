@@ -4,17 +4,13 @@ func loadPack():
 	pass
 
 func savePack(bag:Node):
-	var item:String=""
-	for i in bag.get_children():
-		var number:int
-		var itemID:int
-		print(i.name)
-		if i.getItem()!=null:
-			print(i.getItem().resource_path)
-		else:
-			print("none")
-		item+=i.name
-	print(item)
+	var itemDic:Dictionary={}
+	var count:int=0
+	for slot:InventorySlot in get_children():
+		itemDic[str(count)]={}
+		itemDic[str(count)]["id"]=slot.getItem().id
+		itemDic[str(count)]["num"]=slot.getItem().num
+		count+=1
 	#var json := JSON.stringify(item)
 	#var file := FileAccess.open(bag_path, FileAccess.WRITE)
 	#if not file:

@@ -4,7 +4,7 @@
 [ext_resource type="ButtonGroup" uid="uid://bctrcb15ecpuw" path="res://Script/Inventory/按钮组.tres" id="2_hmd58"]
 [ext_resource type="Theme" uid="uid://clwxb2lrgr8qs" path="res://Theme/mainTheme.tres" id="3_wcnut"]
 [ext_resource type="PackedScene" uid="uid://b4tldil0rt1jt" path="res://Scene/UI_物品详细信息.tscn" id="4_ilruv"]
-[ext_resource type="Resource" uid="uid://c0knrc3f4e3ld" path="res://Item/1000.tres" id="5_pc8ug"]
+[ext_resource type="Resource" path="res://Item/consume/1000.tres" id="5_pc8ug"]
 [ext_resource type="Script" path="res://Script/Item/Item.gd" id="6_gurc2"]
 
 [sub_resource type="Resource" id="Resource_j0cg6"]

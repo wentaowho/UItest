@@ -18,7 +18,7 @@ func dir_contents(path):
 			else:
 				print("发现文件：" + file_name)
 			file_name = dir.get_next()
-			print(file_name.get_basename())
+			print((file_name.get_basename()).get_basename())
 		
 	else:
 		print("尝试访问路径时出错。")
