@@ -27,7 +27,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("4_ey7dh")
 
-[node name="Label" type="Label" parent="Item"]
+[node name="Counter" type="Label" parent="Item"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,5 +47,5 @@ theme_override_constants/outline_size = 5
 theme_override_constants/shadow_outline_size = 0
 theme_override_constants/line_spacing = 0
 theme_override_font_sizes/font_size = 16
-text = "99"
+text = "0"
 vertical_alignment = 2

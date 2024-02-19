@@ -21,3 +21,7 @@ extends PanelContainer
 
 func _ready() -> void:
 	visible=false
+
+func loadItemByID(id:int)->Item:
+	var itemFilePath="res://Item/consume/"+str(id)+".tres"
+	return load(itemFilePath)

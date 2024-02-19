@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Consume" load_steps=4 format=3 uid="uid://3sfo8wd46faf"]
+[gd_resource type="Resource" script_class="Consume" load_steps=4 format=3 uid="uid://duvvv7kfxd4xs"]
 
 [ext_resource type="Script" path="res://Script/Item/Consume.gd" id="1_qv07r"]
 [ext_resource type="Texture2D" uid="uid://thkooofk3luu" path="res://assets/UI/Item/02000003.info.icon.png" id="1_svvdh"]
@@ -9,6 +9,7 @@ script = ExtResource("1_qv07r")
 hp = 0
 mp = 50
 stackMaxNumber = 99
+id = 1001
 ICON = ExtResource("1_svvdh")
 ICON_RAW = ExtResource("2_ya1we")
 itemName = "蓝药水"

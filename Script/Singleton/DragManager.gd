@@ -93,7 +93,7 @@ func releaseItem():
 		replaceItem()
 	else:
 		# print("放回")
-		pickInventorySlot.setItem(pickUpData.item)
+		pickInventorySlot.setItem(pickUpData.item,pickUpData.number)
 		if currentSlot == null:
 			#丢弃
 			# print("none")
@@ -107,10 +107,11 @@ func releaseItem():
 func replaceItem():
 	var currentSlotItem = currentSlot.getItem()
 	var pickInventorySlotItem = pickInventorySlot.getItem()
-	pickInventorySlot.setItem(currentSlotItem)
-	currentSlot.setItem(pickInventorySlotItem)
+	#print(currentSlotItem.item.ID,"--",pickInventorySlotItem.item.ID)
+	pickInventorySlot.setItem(currentSlotItem["item"],currentSlotItem["number"])
+	currentSlot.setItem(pickInventorySlotItem["item"],pickInventorySlotItem["number"])
 	#显示物品详细信息
-	currentSlot.showItemInfo(pickInventorySlotItem)
+	currentSlot.showItemInfo(pickInventorySlotItem["item"])
 	initPickUpData(dragType.p_ReplaceItem)
 
 func initPickUpData(type: dragType):

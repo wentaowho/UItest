@@ -1,11 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bkjkbijp42yks"]
+[gd_scene load_steps=8 format=3 uid="uid://bkjkbijp42yks"]
 
 [ext_resource type="Script" path="res://bagtest.gd" id="1_ks6vt"]
 [ext_resource type="PackedScene" uid="uid://b4tldil0rt1jt" path="res://Scene/UI_物品详细信息.tscn" id="1_qwmvt"]
-[ext_resource type="Resource" path="res://Item/consume/1000.tres" id="2_doahw"]
 [ext_resource type="Script" path="res://Label.gd" id="3_rshe5"]
 [ext_resource type="Script" path="res://Bag.gd" id="3_url0w"]
-[ext_resource type="Resource" path="res://Item/consume/1001.tres" id="3_ycbib"]
 [ext_resource type="Script" path="res://Script/Bag/save.gd" id="7_ly3xb"]
 [ext_resource type="Script" path="res://Script/Bag/load.gd" id="8_2ijbg"]
 [ext_resource type="Script" path="res://Script/Bag/clear.gd" id="9_6t0rm"]
@@ -38,9 +36,6 @@ offset_top = 56.0
 offset_right = 248.0
 offset_bottom = 104.0
 
-[node name="Item" parent="Bag/InventorySlot" index="0"]
-item = ExtResource("2_doahw")
-
 [node name="InventorySlot2" parent="Bag" instance=ExtResource("1_qwmvt")]
 layout_mode = 0
 offset_left = 248.0
@@ -48,14 +43,11 @@ offset_top = 56.0
 offset_right = 296.0
 offset_bottom = 104.0
 
-[node name="Item" parent="Bag/InventorySlot2" index="0"]
-item = ExtResource("3_ycbib")
-
 [node name="InventorySlot3" parent="Bag" instance=ExtResource("1_qwmvt")]
 layout_mode = 0
-offset_left = 152.0
+offset_left = 296.0
 offset_top = 56.0
-offset_right = 200.0
+offset_right = 344.0
 offset_bottom = 104.0
 
 [node name="save" type="Button" parent="."]
@@ -84,7 +76,3 @@ offset_right = 376.0
 offset_bottom = 175.0
 text = "clear"
 script = ExtResource("9_6t0rm")
-
-[editable path="Bag/InventorySlot"]
-[editable path="Bag/InventorySlot2"]
-[editable path="Bag/InventorySlot3"]

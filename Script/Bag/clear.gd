@@ -1,10 +1,13 @@
 extends Button
+@onready var bag: Pack = $"../Bag"
 
 func _ready() -> void:
 	pressed.connect(_button_pressed)
 
 func _button_pressed():
-	dir_contents("res://Item/")
+	#dir_contents("res://Item/")
+	for i in bag.get_children():
+		i.removeItem()
 	pass
 
 func dir_contents(path):

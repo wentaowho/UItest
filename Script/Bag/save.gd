@@ -1,8 +1,13 @@
 extends Button
-@onready var bag: Control = $"../Bag"
+
+
+@onready var bag: Pack = $"../Bag"
+
 
 func _ready() -> void:
 	pressed.connect(_button_pressed)
 
 func _button_pressed():
-	PackManager.savePack(bag)
+	PackManager.saveInventory(bag)
+	pass
+	#PackManager.savePack(bag)

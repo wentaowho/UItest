@@ -17,3 +17,44 @@ func savePack(bag:Node):
 		#return
 	#file.store_string(json)
 
+const save_path="res://save/Inventory.json"
+const save_path2="res://save/Inventory.json"
+
+func saveInventory(pack:Pack)->void:
+	var file := FileAccess.open(save_path2, FileAccess.WRITE)
+	var data:Dictionary
+	var type:String=Pack.PackType.find_key(pack.type)
+	data[type]={}
+	var num:int=0
+	for i in pack.get_children():
+		var item:Dictionary=i.getItem()
+		print(item)
+		print(item.get("id"))
+		data[type][str(num)]={
+			id=item.get("id"),
+			number=item.get("number")
+		}
+		num+=1
+	var json := JSON.stringify(data)
+	if not file:
+		return
+	file.store_string(json)
+
+
+func loadInventory(pack:Pack)->void:
+	var file := FileAccess.open(save_path, FileAccess.READ)
+	if file==null:
+		#初始化背包数据
+		file = FileAccess.open(save_path, FileAccess.WRITE)
+		print("loadinfo:init inventory data......")
+		return
+	else:
+		var json := file.get_as_text()
+		var data := JSON.parse_string(json) as Dictionary
+		var packType=Pack.PackType.find_key(pack.type)
+		for slot in data[packType]:
+			var itemId:int=data[packType][slot]["id"]
+			var number:int=data[packType][slot]["number"]
+			if itemId!=-1:
+				print(number)
+				pack.get_node(str(slot)).setItemByID(itemId,number)

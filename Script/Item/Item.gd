@@ -14,6 +14,7 @@ enum itemType{
 	#"speed" :"速度",
 	#"descr":"描述"
 #}
+@export var id:int
 @export var ICON:Texture
 @export var ICON_RAW:Texture
 @export var itemName:String

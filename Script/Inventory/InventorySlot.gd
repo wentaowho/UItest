@@ -66,9 +66,21 @@ func _on_gui_input(event: InputEvent):
 			if DragManager.pickUpType == DragManager.dragType.p_ReplaceItem:
 				DragManager.pickUpType = DragManager.dragType.none
 
-func setItem(item: Item):
+func setItem(item: Item,number:int):
 	get_node("Item").set("item", item)
+	get_node("Item").set("number", number)
 	setCursorShape()
+
+func setItemByID(id:int,number:int):
+	var item:Item=ItemInfo.loadItemByID(id)
+	if(item==null):
+		print("InventorySlot.setItemByID(id:String) 无法从目录中获取物品，请检查物品ID")
+	else:
+		get_node("Item").set("item", item)
+		get_node("Item").set("number", number)
+func removeItem():
+	get_node("Item").set("item", null)
+	get_node("Item").set("number", -1)
 
 func setCursorShape():
 	if (getItem() != null && !isDrag):
@@ -77,11 +89,20 @@ func setCursorShape():
 		mouse_default_cursor_shape = Control.CURSOR_ARROW
 
 
-func getItem() -> Item:
+func getItem() -> Dictionary:
+	#return get_node("Item")
 	if get_node("Item").item!=null:
-		return get_node("Item").item
+		return {
+			id=get_node("Item").item.id,
+			item=get_node("Item").item,
+			number=get_node("Item").number
+			}
 	else:
-		return null
+		return {
+			id=-1,
+			item=null,
+			number=0
+		}
 
 func showItemInfo(item: Item):
 	ItemInfo.item = item

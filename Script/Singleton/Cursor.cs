@@ -77,7 +77,7 @@ public partial class Cursor : Node2D
                                 {
                                     ChangeState(CursorStatus.Normal);
                                     return;
-                                };
+                                }
                                 ChangeState(CursorStatus.Click);
                                 break;
                             }
