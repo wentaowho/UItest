@@ -8,6 +8,7 @@
 offset_right = 48.0
 offset_bottom = 48.0
 mouse_filter = 0
+mouse_default_cursor_shape = 3
 texture = ExtResource("1_u78l3")
 script = ExtResource("2_cjxth")
 

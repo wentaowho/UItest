@@ -82,13 +82,6 @@ func removeItem():
 	get_node("Item").set("item", null)
 	get_node("Item").set("number", -1)
 
-func setCursorShape():
-	if (getItem() != null && !isDrag):
-		mouse_default_cursor_shape = Control.CURSOR_CROSS
-	else:
-		mouse_default_cursor_shape = Control.CURSOR_ARROW
-
-
 func getItem() -> Dictionary:
 	#return get_node("Item")
 	if get_node("Item").item!=null:
@@ -108,3 +101,11 @@ func showItemInfo(item: Item):
 	ItemInfo.item = item
 	ItemInfo.visible = true
 	ItemInfo.global_position = offset + global_position
+
+func setCursorShape():
+	if (getItem()["item"] != null && !isDrag):
+		print(111)
+		mouse_default_cursor_shape = Control.CURSOR_CROSS
+	else:
+		print(222)
+		mouse_default_cursor_shape = Control.CURSOR_ARROW
