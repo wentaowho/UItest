@@ -34,8 +34,8 @@ Cursor="*res://Scene/Cursor.tscn"
 
 [display]
 
-window/size/viewport_width=683
-window/size/viewport_height=384
+window/size/viewport_width=1366
+window/size/viewport_height=768
 window/size/always_on_top=true
 window/stretch/mode="canvas_items"
 

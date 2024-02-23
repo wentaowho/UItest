@@ -56,5 +56,4 @@ func loadInventory(pack:Pack)->void:
 			var itemId:int=data[packType][slot]["id"]
 			var number:int=data[packType][slot]["number"]
 			if itemId!=-1:
-				print(number)
 				pack.get_node(str(slot)).setItemByID(itemId,number)

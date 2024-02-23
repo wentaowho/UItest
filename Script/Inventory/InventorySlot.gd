@@ -2,7 +2,7 @@ class_name InventorySlot
 extends TextureRect
 @onready var slot: TextureRect = $Item
 
-var offset = Vector2(24, 24)
+const offset = Vector2(24, 24)
 var info
 
 var isDrag: bool:
@@ -78,9 +78,10 @@ func setItemByID(id:int,number:int):
 	else:
 		get_node("Item").set("item", item)
 		get_node("Item").set("number", number)
+
 func removeItem():
 	get_node("Item").set("item", null)
-	get_node("Item").set("number", -1)
+	get_node("Item").set("number", 0)
 
 func getItem() -> Dictionary:
 	#return get_node("Item")
@@ -104,8 +105,6 @@ func showItemInfo(item: Item):
 
 func setCursorShape():
 	if (getItem()["item"] != null && !isDrag):
-		print(111)
 		mouse_default_cursor_shape = Control.CURSOR_CROSS
 	else:
-		print(222)
 		mouse_default_cursor_shape = Control.CURSOR_ARROW

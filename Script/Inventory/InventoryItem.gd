@@ -1,19 +1,8 @@
 class_name InventoryItem
 extends TextureRect
 @onready var counter: Label = $Counter
-var counterVisible: bool
+var counterVisible: bool=false
 var isDrag: bool = false
-# var isDrag: bool = false:
-# 	set(v):
-# 		if !is_node_ready():
-# 			await ready
-# 			isDrag = v
-# 			if isDrag:
-# 				counter.visible = false
-# 				counter.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-# 			else:
-# 				counter.visible = counterVisible
-# 				counter.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 
 @export var item: Item:
 	set(v):
@@ -39,13 +28,16 @@ var isDrag: bool = false
 			await ready
 		if v<=1:
 			counter.visible = false
+			if v<=0:
+				item=null
 		else:
 			counter.visible=true
 			counter.text=str(v)
+		counterVisible = counter.visible
 		number=v
 
 func _ready() -> void:
-	if (item == null):
+	if (item == null or number<=0):
 		counter.visible = false
 
 func getCountLable() -> Label:

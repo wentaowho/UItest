@@ -14,13 +14,14 @@ enum CursorAnimationStatus {
 		Click,
 		Catch
 	}
-static var Singleton: CursorManager
+#static var Singleton: CursorManager
 var _status: CursorStatus = CursorStatus.Normal
 #var _animationStatus: CursorAnimationStatus = CursorAnimationStatus.Normal;
 var _clickPreStatus: CursorStatus;
 var _animationPlayer: AnimationPlayer;
 var isDrag: bool
 var _isClickLeft:bool=false
+
 func _ready() -> void:
 	#Singleton = self;
 	top_level = true;
@@ -41,34 +42,36 @@ func ChangeState(status: CursorStatus):
 	pass
 
 func _input(event: InputEvent) -> void:
+	mouseShpaeManager(event)
+
+func mouseButtonLeftClickCheck(event: InputEvent) -> bool:
+	if event.button_index == MOUSE_BUTTON_LEFT:
+		_isClickLeft=event.is_pressed()
+	else:
+		_isClickLeft=false
+	return _isClickLeft
+
+func mouseShpaeManager(event: InputEvent):
 	match event.get_class():
 		"InputEventMouseButton":
 			match Input.get_current_cursor_shape():
 				#抓取物体
 				Input.CursorShape.CURSOR_CROSS:
 					if mouseButtonLeftClickCheck(event):
-						print("ca")
-						ChangeState(CursorStatus.Catchable)
-					else:
-						print("ab")
 						ChangeState(CursorStatus.Catched)
+					else:
+						ChangeState(CursorStatus.Catchable)
 				_:
 					if mouseButtonLeftClickCheck(event):
-						ChangeState(CursorStatus.Normal)
-					else:
 						ChangeState(CursorStatus.Click)
-			return
+					else:
+						ChangeState(CursorStatus.Normal)
 		"InputEventMouseMotion":
 			match Input.get_current_cursor_shape():
 				Input.CursorShape.CURSOR_CROSS:
 					ChangeState(CursorStatus.Catchable)
 				_:
 					if _isClickLeft:
-						ChangeState(CursorStatus.Normal)
-					else:
 						ChangeState(CursorStatus.Click)
-			return
-
-func mouseButtonLeftClickCheck(event: InputEvent) -> bool:
-	_isClickLeft=event.button_index == MOUSE_BUTTON_LEFT and (!event.is_pressed()||event.is_released())
-	return _isClickLeft
+					else:
+						ChangeState(CursorStatus.Normal)

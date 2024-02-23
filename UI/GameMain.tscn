@@ -1,0 +1,119 @@
+[gd_scene load_steps=19 format=3 uid="uid://c4pfc4mxkxdrx"]
+
+[ext_resource type="Texture2D" uid="uid://yb307g1exkyy" path="res://assets/item/Item.backgrnd.png" id="1_hj8tg"]
+[ext_resource type="Texture2D" uid="uid://betutxfbpf4gt" path="res://assets/item/Item.backgrnd2.png" id="2_10tr4"]
+[ext_resource type="Texture2D" uid="uid://b7aob3gsdm27f" path="res://assets/item/Item.backgrnd3.png" id="4_mpoh0"]
+[ext_resource type="Texture2D" uid="uid://m4w6th130isq" path="res://assets/item/Item.AutoBuild.buttonPoint.normal.0.png" id="5_i7vh1"]
+[ext_resource type="Texture2D" uid="uid://boty0s8s13wjw" path="res://assets/item/Item.FullAutoBuild.buttonCoin.pressed.0.png" id="6_i7cvx"]
+[ext_resource type="Texture2D" uid="uid://cu72owlvm3awa" path="res://assets/item/Item.Tab.enabled.0.png" id="8_jwolf"]
+[ext_resource type="Texture2D" uid="uid://4miuyvfgn445" path="res://assets/item/Item.Tab.enabled.1.png" id="9_s6v1q"]
+[ext_resource type="Texture2D" uid="uid://dg8ysh4eejnn5" path="res://assets/item/Item.Tab.enabled.3.png" id="10_gbpcp"]
+[ext_resource type="Texture2D" uid="uid://43qhlc81kvsd" path="res://assets/item/Item.Tab.enabled.2.png" id="11_s5njv"]
+[ext_resource type="Texture2D" uid="uid://dnfvvo4ymr2ft" path="res://assets/item/Item.Tab.enabled.4.png" id="12_32sot"]
+[ext_resource type="Texture2D" uid="uid://kgctm7ui3tpd" path="res://assets/item/Item.Tab.enabled.5.png" id="13_a4gik"]
+[ext_resource type="Texture2D" uid="uid://b1ygvbfa18pm1" path="res://assets/item/Item.AutoBuild.anibuttonToad.ani.0.png" id="14_idwfq"]
+[ext_resource type="Texture2D" uid="uid://n50tpcy2a5t5" path="res://assets/item/Item.AutoBuild.buttonAppraise.mouseOver.0.png" id="15_7r0yd"]
+[ext_resource type="Texture2D" uid="uid://bvu2il3670wgg" path="res://assets/item/Item.AutoBuild.buttonDisassemble.mouseOver.0.png" id="16_xdhum"]
+[ext_resource type="Texture2D" uid="uid://3u3mwvamqum3" path="res://assets/item/Item.AutoBuild.buttonExtract.normal.0.png" id="17_7m62x"]
+[ext_resource type="Texture2D" uid="uid://rvvjqtsyln2f" path="res://assets/item/Item.AutoBuild.buttonUpgrade.normal.0.png" id="18_e1qle"]
+[ext_resource type="Texture2D" uid="uid://btsjt44ep37hg" path="res://assets/item/Item.FullAutoBuild.buttonSort.normal.0.png" id="19_rk6a4"]
+[ext_resource type="Texture2D" uid="uid://rc6umau4gfr3" path="res://assets/item/Item.FullAutoBuild.buttonGather.normal.0.png" id="20_6wo1p"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Item_backgrnd" type="Sprite2D" parent="."]
+position = Vector2(310.5, 199)
+texture = ExtResource("1_hj8tg")
+
+[node name="Item_backgrnd2" type="Sprite2D" parent="."]
+position = Vector2(310.5, 206)
+texture = ExtResource("2_10tr4")
+
+[node name="Item_backgrnd3" type="Sprite2D" parent="."]
+position = Vector2(310.5, 199)
+texture = ExtResource("4_mpoh0")
+
+[node name="Item_autoBuild_buttonPoint_normal_0" type="Sprite2D" parent="."]
+position = Vector2(261.5, 339)
+texture = ExtResource("5_i7vh1")
+
+[node name="Item_fullAutoBuild_buttonCoin_pressed_0" type="Sprite2D" parent="."]
+position = Vector2(241.5, 322)
+texture = ExtResource("6_i7cvx")
+
+[node name="Item_tab_enabled_0" type="Sprite2D" parent="."]
+position = Vector2(235.5, 41)
+texture = ExtResource("8_jwolf")
+
+[node name="Item_tab_enabled_1" type="Sprite2D" parent="."]
+position = Vector2(265.5, 41)
+texture = ExtResource("9_s6v1q")
+
+[node name="Item_tab_enabled_3" type="Sprite2D" parent="."]
+position = Vector2(295.5, 41)
+texture = ExtResource("10_gbpcp")
+
+[node name="Item_tab_enabled_2" type="Sprite2D" parent="."]
+position = Vector2(325.5, 41)
+texture = ExtResource("11_s5njv")
+
+[node name="Item_tab_enabled_4" type="Sprite2D" parent="."]
+position = Vector2(356.5, 41)
+texture = ExtResource("12_32sot")
+
+[node name="Item_tab_enabled_5" type="Sprite2D" parent="."]
+position = Vector2(387.5, 41)
+texture = ExtResource("13_a4gik")
+
+[node name="Item_autoBuild_anibuttonToad_ani_0" type="Sprite2D" parent="."]
+position = Vector2(236.5, 365)
+texture = ExtResource("14_idwfq")
+
+[node name="Item_autoBuild_buttonAppraise_mouseOver_0" type="Sprite2D" parent="."]
+position = Vector2(266.5, 365)
+texture = ExtResource("15_7r0yd")
+
+[node name="Item_autoBuild_buttonDisassemble_mouseOver_0" type="Sprite2D" parent="."]
+position = Vector2(325.5, 365)
+texture = ExtResource("16_xdhum")
+
+[node name="Item_autoBuild_buttonExtract_normal_0" type="Sprite2D" parent="."]
+position = Vector2(296.5, 365)
+texture = ExtResource("17_7m62x")
+
+[node name="Item_autoBuild_buttonUpgrade_normal_0" type="Sprite2D" parent="."]
+position = Vector2(354.5, 365)
+texture = ExtResource("18_e1qle")
+
+[node name="Item_fullAutoBuild_buttonSort_normal_0" type="Sprite2D" parent="."]
+position = Vector2(374.5, 321)
+texture = ExtResource("19_rk6a4")
+
+[node name="Item_fullAutoBuild_buttonGather_normal_0" type="Sprite2D" parent="."]
+position = Vector2(391.5, 321)
+texture = ExtResource("20_6wo1p")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 393.5
+offset_top = 12.0
+offset_right = 433.5
+offset_bottom = 45.0
+scale = Vector2(1.18024, 0.90352)
+theme_override_colors/font_color = Color(0.988235, 0.988235, 0.988235, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 15
+text = "x
+"
