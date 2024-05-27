@@ -40,7 +40,7 @@ func startPickItem(data: Dictionary) -> void:
 		#修改抓取的物品状态为被抓取
 		pickUpData.isDrag = true
 		#修改鼠标的状态为抓取中
-		Cursor.isDrag = true
+		Cursor.get_node_or_null("Cursor").isDrag = true
 
 		set_process(true)
 	
@@ -115,7 +115,7 @@ func replaceItem():
 	initPickUpData(dragType.p_ReplaceItem)
 
 func initPickUpData(type: dragType):
-	Cursor.isDrag = false;
+	Cursor.get_node_or_null("Cursor").isDrag = false;
 	pickUpData.queue_free()
 	pickUpType = type
 	pickInventorySlot.isDrag = false
