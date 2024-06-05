@@ -23,7 +23,7 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 config/name="U Itest"
 config/tags=PackedStringArray("ui")
 run/main_scene="res://test.tscn"
-config/features=PackedStringArray("4.2", "C#", "Forward Plus")
+config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 
 [autoload]
 
@@ -45,7 +45,7 @@ project/assembly_name="U Itest"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/com.timothyqiu.animation-resetter/plugin.cfg", "res://addons/godot_resource_groups/plugin.cfg", "res://addons/resources_spreadsheet_view/plugin.cfg")
+enabled=PackedStringArray("res://addons/com.timothyqiu.animation-resetter/plugin.cfg")
 
 [gui]
 
@@ -55,3 +55,7 @@ theme/custom_font="res://Theme/AlibabaPuHuiTi-3-75-SemiBold.ttf"
 [plugin]
 
 script-ide/outline_position_right=false
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

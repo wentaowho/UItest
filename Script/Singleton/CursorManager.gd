@@ -31,7 +31,7 @@ func _ready() -> void:
 	_animationPlayer = get_node("AnimationPlayer")
 	_animationPlayer.play(CursorStatus.find_key(_status))
 	mouse_pos = get_global_mouse_position()  
-	#Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 
 func _process(_delta: float) -> void:
