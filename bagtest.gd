@@ -1,7 +1,13 @@
 extends Control
 
 const save_path="res://save/Inventory.json"
+const ITEM_INFO = preload("res://Scene/ItemInfo.tscn")
 
+#func _ready():  
+	#var scene = preload("res://Scene/ItemInfo.tscn")  
+	#var scene_instance = scene.instantiate()  
+	#if scene_instance:  
+		#add_child(scene_instance)  
 
 func saveInventory()->void:
 	pass
@@ -16,4 +22,3 @@ func loadInventory(pack:Pack)->void:
 	else:
 		var json := file.get_as_text()
 		var data := JSON.parse_string(json) as Dictionary
-

@@ -42,5 +42,3 @@ func _ready() -> void:
 
 func getCountLable() -> Label:
 	return counter
-
-

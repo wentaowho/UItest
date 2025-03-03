@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwqscqulq2530"]
+
+[ext_resource type="Theme" uid="uid://clwxb2lrgr8qs" path="res://Theme/mainTheme.tres" id="1_q1jty"]
+[ext_resource type="Script" path="res://Script/h_slider.gd" id="2_yfmu6"]
+
+[node name="HSlider" type="HSlider"]
+custom_minimum_size = Vector2(100, 0)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_q1jty")
+max_value = 2.0
+step = 0.01
+value = 1.0
+script = ExtResource("2_yfmu6")

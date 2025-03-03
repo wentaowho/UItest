@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bohxoslksvpin"]
 
-[ext_resource type="AudioStream" uid="uid://fu58b83n83fc" path="res://assets/Sound/Bgm00/FloralLife.mp3" id="1_p1g2n"]
 [ext_resource type="Script" path="res://Script/Singleton/SoundManager.gd" id="1_tnvb4"]
+[ext_resource type="AudioStream" uid="uid://fu58b83n83fc" path="res://assets/Sound/Bgm00/FloralLife.mp3" id="2_17w1m"]
 
 [node name="SoundManager" type="Node"]
 script = ExtResource("1_tnvb4")
@@ -9,9 +9,7 @@ script = ExtResource("1_tnvb4")
 [node name="BFX" type="Node" parent="."]
 
 [node name="bgm" type="AudioStreamPlayer2D" parent="BFX"]
-stream = ExtResource("1_p1g2n")
-autoplay = true
-bus = &"BFX"
-parameters/looping = true
+stream = ExtResource("2_17w1m")
+bus = &"BGM"
 
 [node name="SFX" type="Node" parent="."]

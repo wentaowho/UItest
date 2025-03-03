@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/AlibabaPuHuiTi-3-115-Black.ttf-1c66b615fbc4bc
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48

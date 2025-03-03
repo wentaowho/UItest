@@ -29,11 +29,13 @@ offset_right = 1190.0
 offset_bottom = 55.0
 tooltip_text = "vvvv"
 theme = ExtResource("2_dpxkp")
+current_tab = 0
 clip_tabs = false
 
 [node name="VScrollBar" type="VScrollBar" parent="TabContainer"]
 layout_mode = 2
 theme = ExtResource("2_dpxkp")
+metadata/_tab_index = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="TabContainer/VScrollBar"]
 layout_mode = 0
@@ -57,6 +59,7 @@ visible = false
 layout_mode = 2
 theme_type_variation = &"MenuPanelContainer"
 metadata/_edit_group_ = true
+metadata/_tab_index = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Menu"]
 layout_mode = 2
@@ -181,9 +184,6 @@ text = "取消"
 layout_mode = 2
 
 [node name="Cursor" parent="." instance=ExtResource("7_05f1v")]
-z_index = 4096
-texture_filter = 2
-position = Vector2(750, 112)
 
 [connection signal="button_up" from="TTT/VBoxContainer/HBoxContainer/Button" to="TTT/VBoxContainer/HBoxContainer/Button" method="_on_button_up"]
 [connection signal="mouse_exited" from="TTT/VBoxContainer/HBoxContainer/Button" to="TTT/VBoxContainer/HBoxContainer/Button" method="_on_mouse_exited"]

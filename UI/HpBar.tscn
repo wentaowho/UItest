@@ -1,0 +1,139 @@
+[gd_scene load_steps=15 format=3 uid="uid://dp066oolgrmst"]
+
+[ext_resource type="Texture2D" uid="uid://cddrw2empo0ex" path="res://assets/StatusBar3.img/mainBar.status.layercover.png" id="1_40lax"]
+[ext_resource type="FontFile" uid="uid://subxa7xq6jkt" path="res://Theme/AlibabaPuHuiTi-3-75-SemiBold.ttf" id="2_ybc67"]
+[ext_resource type="Texture2D" uid="uid://dwbmuawoomlh5" path="res://assets/StatusBar3.img/mainBar.status.gauge.hp.layer0.png" id="4_3evyj"]
+[ext_resource type="Texture2D" uid="uid://dsrt8mgg0kxsh" path="res://assets/StatusBar3.img/mainBar.status.aniHPGauge.0.png" id="5_1bick"]
+[ext_resource type="Texture2D" uid="uid://oqthswsy6vc" path="res://assets/StatusBar3.img/mainBar.status.gauge.mp.layer0.png" id="5_7hqnh"]
+[ext_resource type="Texture2D" uid="uid://t6nhlmol6rya" path="res://assets/StatusBar3.img/mainBar.status.backgrnd.png" id="5_ip8yd"]
+[ext_resource type="Texture2D" uid="uid://d21nj3n11ygn7" path="res://assets/StatusBar3.img/mainBar.status.aniHPGauge.1.png" id="6_me4ln"]
+[ext_resource type="Texture2D" uid="uid://bu7c6hxbykdmi" path="res://assets/StatusBar3.img/mainBar.status.aniHPGauge.2.png" id="7_ohyfl"]
+[ext_resource type="Texture2D" uid="uid://coue6106roghl" path="res://assets/StatusBar3.img/mainBar.status.aniHPGauge.3.png" id="8_lkhi3"]
+[ext_resource type="Texture2D" uid="uid://casbixqphae57" path="res://assets/StatusBar3.img/mainBar.status.aniHPGauge.4.png" id="9_od58r"]
+[ext_resource type="Texture2D" uid="uid://kp2qf351esu7" path="res://assets/StatusBar3.img/mainBar.status.aniHPGauge.5.png" id="10_8yigc"]
+[ext_resource type="FontFile" uid="uid://bxsqc5knqy20c" path="res://assets/国风/Font/MFBH.ttf" id="11_hpeio"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8rjk"]
+atlas = ExtResource("5_ip8yd")
+region = Rect2(18, 2, 178, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_55xxs"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("5_1bick")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_me4ln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ohyfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lkhi3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_od58r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8yigc")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="TextureRect" type="TextureRect"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -683.0
+offset_top = -768.0
+offset_right = -479.0
+offset_bottom = -698.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_40lax")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.0
+offset_top = 3.0
+offset_right = 29.0
+offset_bottom = 21.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("2_ybc67")
+theme_override_font_sizes/font_size = 12
+text = "英雄"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="TextureRect" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 26.0
+offset_right = 198.0
+offset_bottom = 59.0
+texture = SubResource("AtlasTexture_m8rjk")
+
+[node name="HpBar" type="TextureProgressBar" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 28.0
+offset_right = 196.0
+offset_bottom = 41.0
+value = 80.0
+texture_progress = ExtResource("4_3evyj")
+
+[node name="HpBarGauge" type="AnimatedSprite2D" parent="HpBar"]
+position = Vector2(85.25, 6.5)
+scale = Vector2(1.01479, 1.36364)
+sprite_frames = SubResource("SpriteFrames_55xxs")
+frame = 6
+frame_progress = 1.0
+
+[node name="Label" type="Label" parent="HpBar"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 1.0
+offset_right = 127.0
+offset_bottom = 16.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("11_hpeio")
+theme_override_font_sizes/font_size = 10
+text = "123456/123456"
+
+[node name="MpBar" type="TextureProgressBar" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 25.0
+offset_top = 44.0
+offset_right = 196.0
+offset_bottom = 57.0
+value = 80.0
+texture_progress = ExtResource("5_7hqnh")
+
+[node name="HpBarGauge" type="AnimatedSprite2D" parent="MpBar"]
+position = Vector2(85.25, 6.5)
+scale = Vector2(1.01479, 1.36364)
+sprite_frames = SubResource("SpriteFrames_55xxs")
+frame = 5
+frame_progress = 1.0

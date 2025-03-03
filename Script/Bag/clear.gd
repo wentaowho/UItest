@@ -25,4 +25,3 @@ func dir_contents(path):
 		
 	else:
 		print("尝试访问路径时出错。")
-

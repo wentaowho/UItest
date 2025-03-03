@@ -39,6 +39,7 @@ offset_top = -1.0
 offset_right = 272.0
 offset_bottom = 382.0
 mouse_filter = 2
+theme = ExtResource("3_wcnut")
 theme_type_variation = &"PanelContainer_Inventory"
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
@@ -147,4 +148,85 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="InventorySlot3" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot21" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot22" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot23" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot24" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot25" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot26" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot27" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot28" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot29" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
+layout_mode = 2
+
+[node name="InventorySlot30" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("4_ilruv")]
 layout_mode = 2

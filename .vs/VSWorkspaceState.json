@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Script",
+    "\\Script\\Bag"
   ],
-  "SelectedNode": "\\Sprite2D.cs",
+  "SelectedNode": "\\Script\\Bag\\clear.gd",
   "PreviewInSolutionExplorer": false
 }
